@@ -30,6 +30,7 @@ pipeline {
                 success {
                     echo '... Post processing 1'
                     // archiveArtifacts 'dist/add2vals' 
+                    sh 'whoami'
                     sh 'pwd'
                     sh 'ls dist/'
                     echo '... Post processing 2'
