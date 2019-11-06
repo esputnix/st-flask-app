@@ -19,7 +19,11 @@ pipeline {
 
         stage('deploy') { 
             steps {
+                echo '... Deploying 1'
                 sh 'pyinstaller --onefile app.py' 
+                echo '... ... Deploying 2'
+                sh 'python --version'
+                echo '... ... Deploying 3'
             }
         }
     }
