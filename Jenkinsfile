@@ -31,7 +31,7 @@ pipeline {
                     echo '... Post processing 1'
                     // archiveArtifacts 'dist/add2vals' 
                     sh 'pwd'
-                    sh 'ls'
+                    sh 'ls dist/'
                     echo '... Post processing 2'
                 }
             }            
