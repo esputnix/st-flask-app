@@ -30,6 +30,8 @@ pipeline {
                 success {
                     echo '... Post processing 1'
                     // archiveArtifacts 'dist/add2vals' 
+                    sh 'pwd'
+                    sh 'ls'
                     echo '... Post processing 2'
                 }
             }            
