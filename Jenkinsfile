@@ -23,8 +23,16 @@ pipeline {
                 sh 'pyinstaller --onefile app.py' 
                 echo '... ... Deploying 2'
                 sh 'python --version'
-                echo '... ... Deploying 3'
+                sh 'pwd'
+                echo '... ... ... Deploying 3'
             }
+            post {
+                success {
+                    echo '... Post processing 1'
+                    // archiveArtifacts 'dist/add2vals' 
+                    echo '... Post processing 2'
+                }
+            }            
         }
     }
 }
