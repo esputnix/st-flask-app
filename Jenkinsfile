@@ -31,10 +31,13 @@ pipeline {
                     echo '... Post processing 1'
                     // archiveArtifacts 'dist/add2vals' 
                     sh 'whoami'
-                    sh 'ssh ubuntu@ec2-34-219-165-82.us-west-2.compute.amazonaws.com'
+                    sh 'ssh ubuntu@ec2-54-218-28-116.us-west-2.compute.amazonaws.com'
+                    sh 'ls /'
+                    sh 'exit'
+                    echo '... Post processing 2'
                     sh 'pwd'
                     sh 'ls dist/'
-                    echo '... Post processing 2'
+                    echo '... Post processing 3'
                 }
             }            
         }
