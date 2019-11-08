@@ -31,6 +31,7 @@ pipeline {
                     echo '... Post processing 1'
                     // archiveArtifacts 'dist/add2vals' 
                     sh 'whoami'
+                    sh 'pwd'
                     sh 'ssh ubuntu@ec2-34-211-83-26.us-west-2.compute.amazonaws.com pwd'
                     echo '... Post processing 2'
                     sh 'pwd'
