@@ -17,9 +17,11 @@ pipeline {
             }    
         }
 
-    stage('SSH transfer') {
-
-    }
+        stage('testing') { 
+            steps {
+                echo '... Testing 1'
+            }         
+        }
 
 
         stage('deploy') { 
