@@ -18,6 +18,10 @@ pipeline {
         }
 
         stage('testing') { 
+            script {
+
+            }
+            
             steps {
                 echo '... Testing 1'
             }         
