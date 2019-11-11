@@ -34,7 +34,7 @@ pipeline {
                     sh 'pwd'
                     sh 'ls -al'
                     sh 'ls -al /var/jenkins_home/workspace/st-flask-app/flask_rsa'
-                    sh 'ssh -i /var/jenkins_home/workspace/st-flask-app/flask_rsa ubuntu@ec2-34-211-83-26.us-west-2.compute.amazonaws.com pwd'
+                    // sh 'ssh -i /var/jenkins_home/workspace/st-flask-app/flask_rsa ubuntu@ec2-34-211-83-26.us-west-2.compute.amazonaws.com pwd'
                     echo '... Post processing 2'
                     sh 'pwd'
                     sh 'ls dist/'
