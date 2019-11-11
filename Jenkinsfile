@@ -18,11 +18,11 @@ pipeline {
         }
 
         stage('testing') { 
-            script {
 
-            }
-            
+
             steps {
+                script {
+                }                
                 echo '... Testing 1'
             }         
         }
