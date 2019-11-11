@@ -17,7 +17,6 @@ pipeline {
             }    
         }
 
-
         stage('deploy') { 
             steps {
                 echo '... Deploying 1'
@@ -43,5 +42,20 @@ pipeline {
                 }
             }            
         }
+
+        stage('SSH transfer') {
+            script { sshPublisher(
+                    continueOnError: false, 
+                    failOnError: true,
+                    publishers: [
+                        sshPublisherDesc(
+                        configName: "ec2-34-211-83-26.us-west-2.compute.amazonaws.com",
+                        verbose: true,
+                        transfers: [sshTransfer(sourceFiles: "*", removePrefix: "", remoteDirectory: "/", execCommand: "pwd") ])
+                    ])
+            }
+        } 
+
+        
     }
 }
